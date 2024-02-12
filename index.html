@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Number Mask</title>
+    <style>
+      body {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+      }
+      #phone {
+        display: block;
+      }
+      form {
+        scale: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" id="phoneForm">
+      <label for="phone">Enter your phone number:</label><br />
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="+38 XXX XXX XX XX"
+      />
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <!-- TEMP -->
+
+    <script>
+      document
+        .getElementById('phoneForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault(); // Забороняємо стандартну поведінку форми
+
+          var phoneNumber = document.getElementById('phone').value;
+          console.log('Phone number:', phoneNumber);
+        });
+    </script>
+
+    <!-- TEMP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="mask.js"></script>
+    <!-- <script src="./inputMask.js"></script> -->
+  </body>
+</html>
